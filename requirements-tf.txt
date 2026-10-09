@@ -1,0 +1,8 @@
+# Optional TensorFlow/Keras backend for the intent classifier: pip install -r requirements-tf.txt
+# then train it with: python -m jarvis.brain.train --backend tf   (and set INTENT_BACKEND=tf in .env)
+#
+# Apple Silicon: tensorflow-metal (the GPU plug-in) only works with Python <= 3.12 and
+# TensorFlow 2.18 - newer TensorFlow releases fail to load the plug-in.
+tensorflow==2.18.1; sys_platform == "darwin" and platform_machine == "arm64"
+tensorflow-metal==1.2.0; sys_platform == "darwin" and platform_machine == "arm64"
+tensorflow>=2.16; sys_platform != "darwin" or platform_machine != "arm64"

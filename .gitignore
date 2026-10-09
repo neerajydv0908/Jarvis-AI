@@ -1,0 +1,22 @@
+# virtual environments
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# secrets
+.env
+
+# generated: trained models, downloaded corpora, reminder database
+models/*
+!models/.gitkeep
+data/*
+!data/.gitkeep
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,25 @@
+# J.A.R.V.I.S. - core dependencies (Python 3.10-3.12; use 3.12 if you also want TensorFlow on Metal)
+# macOS: run `brew install portaudio flac` first (PyAudio needs PortAudio; Google STT needs flac on Apple Silicon)
+
+# deep learning (PyTorch uses the Apple GPU through MPS automatically)
+torch>=2.2
+numpy>=1.24
+
+# NLP
+nltk>=3.8.1
+spacy>=3.8,<3.9
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+
+# speech
+SpeechRecognition>=3.10
+PyAudio>=0.2.13
+pyttsx3>=2.90
+vosk>=0.3.44          # optional offline recogniser (pip picks the last release with a macOS wheel)
+gTTS>=2.5             # optional Google text-to-speech engine
+
+# generative small talk (DistilGPT-2)
+transformers>=4.40
+
+# action modules & config
+requests>=2.31
+python-dotenv>=1.0
